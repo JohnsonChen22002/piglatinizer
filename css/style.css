@@ -1,1 +1,59 @@
+body {
+   background-image: url("../images/Angry_Birds.png");
+   
+}
 
+#jumbotron {
+    width: 1000px;
+    margin-top: 100px;
+    margin-left: 200px;
+    opacity: 0.9;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    background-color: lightblue;
+    border: 2px solid black;
+    font-family: Oswald;
+    font-style: italic;
+    text-shadow: 1px 2px white;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.9;
+}
+
+#instruction {
+    font-style: italic;
+    font-family: oswald;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: red;
+}
+
+#input {
+    height: 50px;
+    width: 500px;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 200px;
+}
+
+#button {
+    height: 50px;
+    border:2px solid black;
+}
+
+#output {
+    font-family: oswald;
+    margin: 20px;
+    color: black;
+    padding: 20px;
+    font-size: 50px;
+    border-style: double;
+    text-align: center;
+    font-style:italic;
+}
