@@ -7,15 +7,22 @@
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
   $("button").click(function(){
-    var message=$("input").val();
+    var message = $("input").val();
     var playerMessage = player(message);
-    $("#output").text(playerMessage);
+  $("#output").text(playerMessage);
+  
+  
+  
 });
 
 function player(word){
  return word + "ay";    
 }
 
+function sentencetoPigLatin (sentence){
+  var i = (sentence.split('. '));  
+  console.log(sentence);
+}
 
 
 });
