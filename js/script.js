@@ -8,22 +8,29 @@
 $(document).ready(function() {
   $("button").click(function() {
     var message = $("input").val();
+    
+    
+    
     var messageSplit = sentencetoPigLatin(message);
     
     
+    //var messageSlice = wordToPigLatin(message)
     
     
     
     
+    var playerMessage = player(messageSplit);
     
-    
-    var playerMessage = player(message);
     $("#output").text(playerMessage);
 
-    function player(word) {
-      for (var i = 0; i < 1; i++) {
-        $("#output").append(word + "ay");
+    function player(words) {
+      var pigLatinSentence = "";
+      for (var i = 0; i < words.length; i++) {
+        
+        wordToPigLatin(words[i]);
+        pigLatinSentence = pigLatinSentence + words[i] + "ay ";
       }
+      return pigLatinSentence;
     }
   });
 });
@@ -31,14 +38,18 @@ $(document).ready(function() {
 
 
 function sentencetoPigLatin(sentence) {
-  var words = sentence.split(' ');
-  return words;
+  var word = sentence.split(' ');
+  return word;
 }
 
 function wordToPigLatin(word) {
   var FirstLetter = word.slice(0, 1);
+  isVowel(FirstLetter);
   
 }
+
+
+
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
 
 
