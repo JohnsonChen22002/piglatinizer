@@ -1,18 +1,24 @@
 body {
-   background-image: url("../images/Angry_Birds.png");
-   
+    background-image: url("../images/background.jpeg");
+
 }
 
 #jumbotron {
     width: 1000px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 200px;
-    opacity: 0.9;
+    opacity: 0.8;
+}
+
+#book {
+    position: relative;
+    text-align: center;
+    margin-left: 230px;
 }
 
 #title {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 50px;
     color: black;
     background-color: lightblue;
     border: 2px solid black;
@@ -22,7 +28,11 @@ body {
     text-transform: uppercase;
     text-align: center;
     opacity: 0.9;
+    border-radius: 50px 10px 50px 10px;
+    position: relative;
+    text-align: center;
 }
+
 
 #instruction {
     font-style: italic;
@@ -44,7 +54,7 @@ body {
 
 #button {
     height: 50px;
-    border:2px solid black;
+    border: 2px solid black;
 }
 
 #output {
@@ -55,5 +65,5 @@ body {
     font-size: 50px;
     border-style: double;
     text-align: center;
-    font-style:italic;
+    font-style: italic;
 }
