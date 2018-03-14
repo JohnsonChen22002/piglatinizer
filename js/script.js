@@ -1,65 +1,81 @@
-$(document).ready(function() {
-  $("button").click(function() {
-    var message = $("input").val();
+// $(document).ready(function() {
+//   $("button").click(function() {
+//     var message = $("input").val();
 
 
 
-    var messageSplit = sentencetoword(message);
+//     var messageSplit = sentencetoword(message);
 
 
-    //var messageSlice = wordToPigLatin(message)
-
-
-
-
-    var playerMessage = player(messageSplit);
-
-    $("#output").text(playerMessage);
-
-    function player(words) {
-      var pigLatinSentence = "";
-      for (var i = 0; i < words.length; i++) {
-
-        wordToPigLatin(words[i]);
-        pigLatinSentence = pigLatinSentence + words[i] + "ay ";
-      }
-      return pigLatinSentence;
-    }
-  });
-});
+//     //var messageSlice = wordToPigLatin(message)
 
 
 
-function sentencetoword(sentence) {
-  var word = sentence.split(' ');
-  return word;
-}
 
-function wordToPigLatin(word) {
-  var FirstLetter = word.slice(0, 1);
-  isVowel(FirstLetter);
-  if (isVowel(FirstLetter)){
-    return word + "way";
-  } else {
-    for (var i = 0; i < word.length; i++){
+//     var playerMessage = player(messageSplit);
+
+//     $("#output").text(playerMessage);
+
+//     function player(words) {
+//       var pigLatinSentence = "";
+//       for (var i = 0; i < words.length; i++) {
+
+//         wordToPigLatin(words[i]);
+//         pigLatinSentence = pigLatinSentence + words[i] + "ay ";
+//       }
+//       return pigLatinSentence;
+//     }
+//   });
+// });
+
+
+
+// function sentencetoword(sentence) {
+//   var word = sentence.split(' ');
+//   return word;
+// }
+
+// function wordToPigLatin(word) {
+//   var FirstLetter = word.slice(0, 1);
+//   isVowel(FirstLetter);
+//   if (isVowel(FirstLetter)){
+//     return word + "way";
+//   } else {
+//     for (var i = 0; i < word.length; i++){
       
-      if (isVowel(word[i])) {
-      word.slice(0, )
-      } 
-    }
-  }
-  //console.log(FirstLetter);
+//       if (isVowel(word[i])) {
+//       word.slice(0, )
+//       } 
+//     }
+//   }
+//   //console.log(FirstLetter);
 
+// }
+
+
+// function isVowel(letter) {
+//   if (letter == "a" || letter == "e" || letter == "i" ||
+//     letter == "o" || letter == "u") {
+//     return true;
+//   }
+//   else {
+//     return false;
+//   }
+// }
+
+/* global $*/
+$(document).ready(function() {
+});
+function buttonClicked(){
+  var sentence = $("#input").val();
+  var result = piglatinze(sentence);
+  $("#output").text(result);
 }
 
-
-function isVowel(letter) {
-  if (letter == "a" || letter == "e" || letter == "i" ||
-    letter == "o" || letter == "u") {
-    return true;
+function piglatinze(input) {
+  if(input[0].match(/[aeiouAEIOU]/)){
+    return(input + "way");
   }
-  else {
-    return false;
-  }
+  else(input[0].match(/[bcdfghklmnpqrstvwxyzBCDFGHKLMNPQRSTVWXYZ]/));
+    return(input.slice(1,input.length) + input[0] + "ay ");
 }
-
